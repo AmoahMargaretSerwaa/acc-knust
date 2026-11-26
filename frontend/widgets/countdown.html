@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ACC KNUST Countdown</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align:center;
+            padding:30px;
+        }
+
+        .card{
+            border:1px solid #ddd;
+            border-radius:10px;
+            padding:20px;
+            width:300px;
+            margin:auto;
+        }
+
+        #countdown{
+            font-size:24px;
+            font-weight:bold;
+            color:green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>ACC KNUST Meeting</h2>
+    <p>Countdown to next meeting</p>
+    <div id="countdown"></div>
+</div>
+
+<script>
+const targetDate = new Date("December 31, 2026 16:00:00").getTime();
+
+setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance/(1000*60*60*24));
+    const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+    document.getElementById("countdown").innerHTML =
+        days + " Days " + hours + " Hours";
+},1000);
+</script>
+
+</body>
+</html>
