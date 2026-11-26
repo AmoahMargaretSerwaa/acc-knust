@@ -42,3 +42,9 @@
 
 ###### git push origin branch-name
 
+
+6. git diff
+Purpose: Shows the differences between file versions and changes.
+
+git diff
+
