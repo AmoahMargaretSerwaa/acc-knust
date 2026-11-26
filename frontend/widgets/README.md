@@ -8,3 +8,7 @@
 
 ###### **Open** *countdown.html* **in any web browser.**
 
+
+
+###### **The widget updates automatically every second.**
+
